@@ -51,9 +51,9 @@ app.listen(process.env.PORT ||8000,()=>{
     console.log("server started")
 })
 
-app.use(express.static("frontend/build"))
+app.use(express.static("build"))
 app.get("/*",(req,res)=>{
-  res.sendFile(path.join(__dirname,'frontend/build/index.html'))
+  res.sendFile(path.join(__dirname,'build/index.html'))
 })
 
 //app.use(express.static("frontend/build"))
